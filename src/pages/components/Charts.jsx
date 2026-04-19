@@ -172,7 +172,7 @@ export function InterestPieChart({ interest }) {
 }
 
 // ── Default export (combined) ─────────────────────────────────────────────────
-export default function Charts({ queries, interest }) {
+export default function Charts({ queries, interest, loading }) {
   const { theme } = useTheme();
   const t = theme.colors;
 

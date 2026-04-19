@@ -4,6 +4,7 @@ import { ErrorPage } from "../pages/common/ErrorPage";
 import { NotFoundPage } from "../pages/common/NotFoundPage";
 import RedirectPage from "../pages/common/RedirectPage";
 import HomeUILayout from "../layout/Home/HomeLayout";
+import LoginPage from "@/pages/Login";
 
 const router = createBrowserRouter(
   [
@@ -20,7 +21,10 @@ const router = createBrowserRouter(
           path: "/home",
           element: <Home />,
         },
-       
+        {
+          path: "/login",
+          element: <LoginPage />,
+        },
         {
           path: "*",
           element: <NotFoundPage />,

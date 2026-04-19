@@ -2,9 +2,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { ThemeProvider } from "./theme/ThemeContext";
+import { AuthProvider } from "./context/authContext";
 
 createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  <AuthProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </AuthProvider>,
 );

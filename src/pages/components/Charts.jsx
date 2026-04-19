@@ -1,6 +1,5 @@
+import { useTheme } from "@/theme/ThemeContext";
 import {
-  LineChart,
-  Line,
   XAxis,
   YAxis,
   Tooltip,
@@ -13,7 +12,6 @@ import {
   AreaChart,
   Area,
 } from "recharts";
-import { useTheme } from "../theme/ThemeContext";
 
 // ── Custom Tooltip ────────────────────────────────────────────────────────────
 function CustomTooltip({ active, payload, label, theme }) {
@@ -117,7 +115,10 @@ export function InterestPieChart({ interest }) {
   const { theme } = useTheme();
   const t = theme.colors;
 
-  const counts = (interest || []).reduce((acc, item) => {
+  const safeInterest = Array.isArray(interest) ? interest : [];
+
+  const counts = safeInterest.reduce((acc, item) => {
+    if (!item?.source) return acc; // safety
     acc[item.source] = (acc[item.source] || 0) + 1;
     return acc;
   }, {});
@@ -204,7 +205,7 @@ export default function Charts({ queries, interest }) {
             marginBottom: "1.25rem",
           }}
         >
-          // 7-day trend
+          7-day trend
         </div>
         <QueryLineChart queries={queries} />
       </div>
@@ -234,7 +235,7 @@ export default function Charts({ queries, interest }) {
             marginBottom: "1.25rem",
           }}
         >
-          // distribution
+          distribution
         </div>
         <InterestPieChart interest={interest} />
       </div>

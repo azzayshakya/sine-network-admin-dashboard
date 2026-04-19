@@ -1,16 +1,60 @@
-# React + Vite
+# 🚀 React Project template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **fully pre-configured** React starter template with **ShadCN, Tailwind CSS, React Router DOM, TanStack Query**, and more. Clone it, delete the dummy pages, and start building! ⚡
 
-Currently, two official plugins are available:
+## 📦 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🏗 **React + Vite** - Fast & modern setup
+- 🎨 **ShadCN + Tailwind CSS** - Beautiful, customizable UI
+- 🛠 **React Router DOM** - Nested routing made easy
+- 🔄 **TanStack Query** - Powerful data fetching
+- ✅ **ESLint + Prettier** - Code quality & formatting
 
-## React Compiler
+## 📂 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+📦 your-project
+├── 📂 src
+│   ├── 📂 layout (App layouts)
+│   ├── 📂 pages (Dummy pages to delete)
+│   ├── 📂 components (UI components)
+│   ├── 📂 router (Routing config)
+│   ├── App.jsx
+│   └── main.jsx
+├── 📜 package.json
+├── 📜 tailwind.config.js
+├── 📜 postcss.config.js
+└── 📜 README.md
+```
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1️⃣ Clone the project
+```bash
+ git clone https://github.com/your-repo.git
+ cd your-project
+```
+
+2️⃣ Install dependencies
+```bash
+ npm install
+```
+
+3️⃣ Run the project
+```bash
+ npm run dev
+```
+
+4️⃣ Delete dummy pages in `src/pages/`
+
+## 🎯 Why Use This?
+
+✅ **Skip setup** – No need to configure Tailwind, ShadCN, or Routing.
+✅ **Pre-configured structure** – Organized files and folders.
+✅ **Lightning-fast development** – Just clone and start coding!
+
+---
+_💡 Feel free to customize and contribute!_
+
+Made with ❤️ by **Ajay Shakya** (@azzayshakya) 🚀
+

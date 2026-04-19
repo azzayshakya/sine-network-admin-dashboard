@@ -1,6 +1,8 @@
 import { Table } from "antd";
 
 export default function InterestTable({ data }) {
+  const safeData = Array.isArray(data) ? data : [];
+
   const columns = [
     { title: "Email", dataIndex: "email" },
     {
@@ -10,5 +12,5 @@ export default function InterestTable({ data }) {
     },
   ];
 
-  return <Table columns={columns} dataSource={data} rowKey="_id" />;
+  return <Table columns={columns} dataSource={safeData} rowKey="_id" />;
 }

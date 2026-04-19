@@ -1,18 +1,21 @@
-import { useAuth } from "./context/authContext";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import { Spin } from "antd";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/Router";
 
-export default function App() {
-  const { user, loading } = useAuth();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,
+    },
+  },
+});
 
-  if (loading) {
-    return (
-      <div style={{ height: "100vh", display: "grid", placeItems: "center" }}>
-        <Spin size="large" />
-      </div>
-    );
-  }
-
-  return user ? <Dashboard /> : <Login />;
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
+
+export default App;

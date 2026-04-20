@@ -1,6 +1,6 @@
 import { publicAPI } from "@/apis/axiosInstance";
 import { useState } from "react";
-import "./login.css";
+import "./Login.css";
 import { useAuth } from "@/context/authContext";
 import { useNavigate } from "react-router-dom";
 const loginUser = async (data) => {

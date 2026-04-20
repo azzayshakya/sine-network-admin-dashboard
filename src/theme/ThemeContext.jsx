@@ -2,7 +2,6 @@ import { createContext, useContext, useState, useMemo } from "react";
 
 const ThemeContext = createContext();
 
-// 🎨 Theme Tokens
 const lightTheme = {
   mode: "light",
   colors: {
@@ -39,7 +38,6 @@ const darkTheme = {
   },
 };
 
-// 🧱 Shared Design Tokens
 const baseTheme = {
   fonts: {
     body: "Inter, sans-serif",
@@ -62,7 +60,6 @@ const baseTheme = {
   },
 };
 
-// 🚀 Provider
 export const ThemeProvider = ({ children }) => {
   const [mode, setMode] = useState("light");
 
@@ -89,5 +86,4 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// 🎯 Hook
 export const useTheme = () => useContext(ThemeContext);

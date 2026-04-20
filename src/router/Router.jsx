@@ -5,6 +5,8 @@ import { NotFoundPage } from "../pages/common/NotFoundPage";
 import RedirectPage from "../pages/common/RedirectPage";
 import HomeUILayout from "../layout/Home/HomeLayout";
 import LoginPage from "@/pages/Login";
+import TableData from "@/pages/TableData";
+import Charts from "@/pages/Charts";
 
 const router = createBrowserRouter(
   [
@@ -20,6 +22,14 @@ const router = createBrowserRouter(
         {
           path: "/home",
           element: <Home />,
+        },
+        {
+          path: "/tables",
+          element: <TableData />,
+        },
+        {
+          path: "/charts",
+          element: <Charts />,
         },
         {
           path: "/login",
